@@ -41,5 +41,6 @@ Java_com_example_hybridapp_AppUtil_helloCpp( JNIEnv* env, jobject thiz )
     char* theAbi = ABI;
     strcat(theHello, theAbi);
 
+    // TODO: Native app breakpoint here (works out-of-the box)
     return (*env)->NewStringUTF(env, theHello);
 }

@@ -41,5 +41,10 @@ Java_com_example_hybridlib_LibUtil_helloCpp( JNIEnv* env, jobject thiz )
     char* theAbi = ABI;
     strcat(theHello, theAbi);
 
+    // TODO: Native library breakpoint here
+    // Must add symbol path to hybrid debugger plus ABI such as:
+    // $PROJECT_DIR$/hybridlib/build/intermediates/binaries/debug/obj/x86_64   or
+    // $PROJECT_DIR$/hybridlib/build/intermediates/binaries/debug/obj/arm64-v8a
+    // See Google Issue: https://code.google.com/p/android/issues/detail?id=197850
     return (*env)->NewStringUTF(env, theHello);
 }
